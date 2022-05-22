@@ -192,7 +192,7 @@
 <span class="sd">    which have an equal area in the image [Default is 16 if ``divisions`` is</span>
 <span class="sd">    not set]. The :class:`pandas.DataFrame` or ASCII file output can be used to</span>
 <span class="sd">    make a colormap with :meth:`pygmt.makecpt` and an image with</span>
-<span class="sd">    :meth:`pygmt.Figure.grdimage` that has all levels of gray occuring</span>
+<span class="sd">    :meth:`pygmt.Figure.grdimage` that has all levels of gray occurring</span>
 <span class="sd">    equally.</span>
 
 <span class="sd">    :meth:`pygmt.grdhisteq.equalize_grid` provides a way to write a grid with</span>
@@ -264,7 +264,9 @@
         <span class="k">with</span> <span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">lib</span><span class="p">:</span>
             <span class="n">file_context</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">virtualfile_from_data</span><span class="p">(</span><span class="n">check_kind</span><span class="o">=</span><span class="s2">&quot;raster&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">grid</span><span class="p">)</span>
             <span class="k">with</span> <span class="n">file_context</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
-                <span class="n">lib</span><span class="o">.</span><span class="n">call_module</span><span class="p">(</span><span class="s2">&quot;grdhisteq&quot;</span><span class="p">,</span> <span class="n">build_arg_string</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">infile</span><span class="o">=</span><span class="n">infile</span><span class="p">))</span>
+                <span class="n">lib</span><span class="o">.</span><span class="n">call_module</span><span class="p">(</span>
+                    <span class="n">module</span><span class="o">=</span><span class="s2">&quot;grdhisteq&quot;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">build_arg_string</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">infile</span><span class="o">=</span><span class="n">infile</span><span class="p">)</span>
+                <span class="p">)</span>
 
         <span class="k">if</span> <span class="n">output_type</span> <span class="o">==</span> <span class="s2">&quot;file&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -406,7 +408,7 @@
 <span class="sd">        ``divisions`` is not set]. The :class:`pandas.DataFrame` or ASCII file</span>
 <span class="sd">        output can be used to make a colormap with :meth:`pygmt.makecpt` and an</span>
 <span class="sd">        image with :meth:`pygmt.Figure.grdimage` that has all levels of gray</span>
-<span class="sd">        occuring equally.</span>
+<span class="sd">        occurring equally.</span>
 
 <span class="sd">        Full option list at :gmt-docs:`grdhisteq.html`</span>
 
@@ -512,9 +514,9 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2022, The PyGMT Developers.
-      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/f6190794">f6190794</a></code>.
+      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/ed591a3c">ed591a3c</a></code>.
       </span>
-      <span class="lastupdated">Last updated on Apr 11, 2022.
+      <span class="lastupdated">Last updated on May 22, 2022.
       </span></p>
   </div>
 

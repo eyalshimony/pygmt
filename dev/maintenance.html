@@ -253,7 +253,8 @@ It is also scheduled to run daily on the <em>main</em> branch.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ci_tests.yaml</span></code> (Tests on Linux/macOS/Windows)</p>
 <p>This is run on every commit to the <em>main</em> and Pull Request branches.
-It is also scheduled to run daily on the <em>main</em> branch.
+It is also scheduled to run regular tests daily and run full tests
+(including doctests) on Wednesday on the <em>main</em> branch.
 In draft Pull Requests, only two jobs on Linux are triggered to save on
 Continuous Integration resources:</p>
 <ul class="simple">
@@ -280,8 +281,8 @@ from the <em>main</em> branch onto the <code class="docutils literal notranslate
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ci_tests_dev.yaml</span></code> (GMT Dev Tests on Linux/macOS/Windows).</p>
 <p>This is triggered when a PR is marked as “ready for review”, or using the
-slash command <code class="docutils literal notranslate"><span class="pre">/test-gmt-dev</span></code>. It is also scheduled to run daily on the
-<em>main</em> branch.</p>
+slash command <code class="docutils literal notranslate"><span class="pre">/test-gmt-dev</span></code>. It is also scheduled to run on Monday,
+Wednesday and Friday on the <em>main</em> branch.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cache_data.yaml</span></code> (Caches GMT remote data files needed for GitHub Actions CI)</p>
 <p>This is scheduled to run every Sunday at 12:00 (UTC).
@@ -491,9 +492,9 @@ from the PyPI “Download files” section.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2022, The PyGMT Developers.
-      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/f6190794">f6190794</a></code>.
+      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/ed591a3c">ed591a3c</a></code>.
       </span>
-      <span class="lastupdated">Last updated on Apr 11, 2022.
+      <span class="lastupdated">Last updated on May 22, 2022.
       </span></p>
   </div>
 
