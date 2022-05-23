@@ -101,7 +101,7 @@ with fig.inset(position="jBL+w3c+o0.5c/0.2c", box="+pblack"):
     # Use a plotting function to create a figure inside the inset
     fig.coast(
         region=[-80, -65, 35, 50],
-        projection="M3c",
+        projection="M?c",
         land="gray",
         borders=[1, 2],
         shorelines="1/thin",
